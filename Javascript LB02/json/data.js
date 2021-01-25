@@ -1,7 +1,6 @@
-const professionList = ["Applikationsentwickler", "IMS",
-    "Mediamaitker", "Recyclist", "Detailhandel", "Kaufmann"];
 
-let lernendenListe =
+
+let kundenListe =
     [
         {
             "kundenid": 101,
@@ -12,35 +11,34 @@ let lernendenListe =
                 "ort": "Fischenthal",
                 "plz": "8497"
             },
-            "courses": {
-                "berufskunde": ["M286", "M287", "M288", "usw."],
-                "allgemein": ["Franz", "Deutsch", "Mathe", "usw."]
-            }
+           
         }, {
-            "kundenid": 101,
-            "firstname": "Hans",
-            "lastname": "Muster",
+            "kundenid": 102,
+            "firstname": "Philipp",
+            "lastname": "Meier",
             "adresse": {
-                "strasse": "Oberaurüti 1",
-                "ort": "Fischenthal",
-                "plz": "8497"
+                "strasse": "Entlisbergstr. 48",
+                "ort": "Zürich",
+                "plz": "8038"
             },
-            "courses": {
-                "berufskunde": ["M286", "M287", "M288", "usw."],
-                "allgemein": ["Franz", "Deutsch", "Mathe", "usw."]
-            }
+         
         }, {
-            "kundenid": 101,
-            "firstname": "Hans",
-            "lastname": "Muster",
+            "kundenid": 103,
+            "firstname": "Kurt",
+            "lastname": "Lamert",
             "adresse": {
-                "strasse": "Oberaurüti 1",
-                "ort": "Fischenthal",
-                "plz": "8497"
+                "strasse": "Hohfurenstr. 8",
+                "ort": "Zollikerberg",
+                "plz": "8125"
             },
-            "courses": {
-                "berufskunde": ["M286", "M287", "M288", "usw."],
-                "allgemein": ["Franz", "Deutsch", "Mathe", "usw."]
-            }
+        },{
+            "kundenid": 104,
+            "firstname": "Maria",
+            "lastname": "Steiner",
+            "adresse": {
+                "strasse": "Heuelstr. 35",
+                "ort": "Rümlang",
+                "plz": "8153"
+            },
         },
     ]

@@ -1,55 +1,30 @@
-/**
- * Webapp with Pagination
- */
+
 
 /**
  * Deklaration der Variablen
  */
 let index;
-let lernender = undefined;
+let kunde = undefined;
 
 /**
  * Ausgabe zeigen
  */
 function showUI(){
     //Identification
-    let htmlObj = document.getElementById("identification");
+    let htmlObj = document.getElementById("kunde");
     htmlObj.innerHTML =
-        `id: ${lernender.kundenid}<br>`+
-        `Name: ${lernender.firstname}<br>`+
-        `Vorname: ${lernender.lastname}`;
+        `id: ${kunde.kundenid}<br>`+
+        `Name: ${kunde.firstname}<br>`+
+        `Vorname: ${kunde.lastname}`;
 
 //adresse
-    htmlObj = document.getElementById("lehrbetrieb");
+    htmlObj = document.getElementById("adresse");
     htmlObj.innerHTML =
-        `Strasse/Hausnr: ${lernender.adresse.strasse}<br>`+
-        `Ort: ${lernender.adresse.ort}<br>`+
-        `Plz: ${lernender.adresse.plz}`;
+        `Strasse/Hausnr: ${kunde.adresse.strasse}<br>`+
+        `Ort: ${kunde.adresse.ort}<br>`+
+        `Plz: ${kunde.adresse.plz}`;
 
-    //Kurse - Berufskunde
-    htmlObj = document.getElementById("berufskunde");
-    //clear
-    htmlObj.innerHTML = "";
-    //set
-    lernender.courses.berufskunde.forEach(modulid => {
-        htmlObj.innerHTML += `${modulid}<br>`;
-    });
-
-        htmlObj = document.getElementById("allgemeinTitle");
-    //clear
-    htmlObj.innerHTML = "";
-    //set
-    htmlObj.innerHTML += " " + fach;
-
-    //Kurse - Allgemein Bildung
-    htmlObj = document.getElementById("allgemein");
-    //clear
-    htmlObj.innerHTML = "";
-    //set
-    let faecherListe = lernender.courses.allgemein;
-    for (let i=0;i<faecherListe.length; i++){
-        htmlObj.innerHTML += `${faecherListe[i]}<br>`;
-    };
+    
 
     //Index im Pagination-Element zeigen
     htmlObj = document.getElementById("showIndex");
@@ -74,7 +49,7 @@ function showNext() {
         index = 0;
     } else {
         //... sonst falls der index eins kleiner als das Maximum ist
-        if (lernendenListe.length-1 > index){
+        if (kundenListe.length-1 > index){
             //... erhöhe den index um 1
             index++;
         }
@@ -82,7 +57,7 @@ function showNext() {
     //speichere wieder den index im Browser-Speicher
     localStorage.setItem("index", index);
     //hole den nächst höheren Eintrag
-    lernender = lernendenListe[index];
+    kunde = kundenListe[index];
     //zeige den Eintrag
     showUI();
 }
@@ -109,20 +84,20 @@ function showPrevious() {
     //speichere wieder den index im Browser-Speicher
     localStorage.setItem("index", index);
     //hole den nächst höheren Eintrag
-    lernender = lernendenListe[index];
+    kunde = kundenListe[index];
     //zeige den Eintrag
     showUI();
 }
 
 //start app
 //Falls der index nicht definiert ist ...
-if (lernender === undefined){
+if (kunde === undefined){
     //... dann setze den index auf 0 (Anfang)
     index = 0;
     //speichere wieder den index im Browser-Speicher
     localStorage.setItem("index", index);
     //hole den nächst höheren Eintrag
-    lernender = lernendenListe[index];
+    kunde = kundenListe[index];
     //zeige den Eintrag
     showUI();
 }
