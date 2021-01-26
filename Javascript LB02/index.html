@@ -11,6 +11,8 @@
 <body>
 
 <header>
+
+	
     <a id="logo" title="zurück zur Startseite!" href="index.html"><img src="img/zürichpictures_logo.png" height="40px"  alt="Zürich Pictures GMBH"></a>
     
     <nav id="navigation">
@@ -20,8 +22,26 @@
 		<li><a href="1-unterseite.html">Store</a></li>
 		<li><a href="1-unterseite.html">Portfolio</a></li>
 		<li><a href="2-contact.html">Kontakt</a></li>
-    </ul>
-	</nav>   
+	</ul>
+	<div id="zeit"></div>
+
+	<script language="javascript" type="text/javascript">
+		
+	window.setInterval("datum()",36000);
+	
+	function datum() {
+		var zeit = new Date ();
+		var stunde = (zeit.getHours() < 10 ? '0' + zeit.getHours() : zeit.getHours());
+		var minute = (zeit.getMinutes() < 10 ? '0' + zeit.getMinutes() : zeit.getMinutes());
+		var sekunde = (zeit.getSeconds() < 10 ? '0' + zeit.getSeconds() : zeit.getSeconds());
+		document.getElementById("zeit").innerHTML = ' '
+		+ stunde + ':' + minute;
+	}
+	
+	datum();	
+	</script>
+	
+	</nav> 
     
  	<section class="flexslider">
           <ul class="slides">

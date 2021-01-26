@@ -276,3 +276,12 @@ nav#navigation{
 
 article section, section.spalte {width:100%;}
 }
+
+#clock {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 3em;
+	color: #17d4fe;
+	letter-spacing: 7px;
+}
