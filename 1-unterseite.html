@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Zürichpictures GMBH">
+    <link rel="stylesheet" href="css/style.css">
+	<title>Zürich Pictures GMBH Unterseite</title>
+</head>
+<body>
+
+<header>
+    <a id="logo" title="zurück zur Startseite" href="index.html"><img src="img/zürichpictures_logo.png" height="40px"  alt="Webseiten Name"></a>
+
+	<nav id="navigation">
+    <ul>
+      	<li><a href="index.html">Home</a></li>
+		<li><a aria-current="page">Über uns</a></li>
+		<li><a href="1-unterseite.html">Store</a></li>
+		<li><a href="1-unterseite.html">Portfolio</a></li>
+		<li><a href="2-contact.html">Kontakt</a></li>
+	</ul>
+	<div id="zeit"></div>
+
+	<script language="javascript" type="text/javascript">
+		
+	window.setInterval("datum()",36000);
+	
+	function datum() {
+		var zeit = new Date ();
+		var stunde = (zeit.getHours() < 10 ? '0' + zeit.getHours() : zeit.getHours());
+		var minute = (zeit.getMinutes() < 10 ? '0' + zeit.getMinutes() : zeit.getMinutes());
+		var sekunde = (zeit.getSeconds() < 10 ? '0' + zeit.getSeconds() : zeit.getSeconds());
+		document.getElementById("zeit").innerHTML = ' '
+		+ stunde + ':' + minute;
+	}
+	
+	datum();	
+	</script>
+	
+	</nav>  
+</header>
+
+     	
+<main>
+
+<article>        
+	<h1>Berufsberschreibung Mediamatiker</h1>
+
+    <p>
+		Als Mediamatiker/in EFZ bist du in verschiedenen Bereichen der Kommunikationstechnologien tätig. Du gestaltest Webseiten,
+		erstellst Präsentationen und betreust Veranstaltungen. Du erweiterst deine Kenntnisse über Multimedia, Design, Marketing,
+		Informatik und Administration. Zudem erstellst du beispielsweise kurze Filmsequenzen, Fotos oder Tonaufnahmen und arbeitest mit verschiedenen Programmen.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam  tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean
+		turpis diam, feugiat a luctus in, rhoncus eget risus. Maecenas consequat porttitor.
+    </p>
+   <h1>Berufsbeschreibung Fotograf</h1>
+
+    <p>
+        Fotografen und Fotografinnen erstellen je nach Schwerpunkt Porträt-, Produkt-, Industrie- und Architektur- oder wissenschaftliche Fotos. Darüber hinaus werden Fotografien auch im Film und in der Videotechnik eingesetzt. Vor einer Aufnahme entscheiden Fotografen und Fotografinnen, welches Aufnahmematerial und welche Kamera einschließlich Objektiv sich für die jeweiligen Aufnahmebedingungen am besten eignen. Sie wählen die Beleuchtungsart, richten die Beleuchtung ein und fotografieren
+		ihr Motiv ‑ teils mehrfach, z.B. mit verschiedenen Objektiven, aus unterschiedlichen Kamerawinkeln
+		oder bei veränderten Lichtverhältnissen.
+    </p>    
+
+<aside>
+    <h2>Unsere Kompetenzen</h2>
+	<ul>
+		<li><p>Fotografie </p></li>
+		<li><p>Bildretouchierung </p></li>
+		<li><p>Mediadesign </p> </li>
+		<li><p>Gestaltung </p></li>
+		<li><p>Videografie </p></li>
+		<li><p>Filmeschneiden </p></li>
+	</ul>
+</aside>    
+
+
+
+
+</main>
+
+<footer>
+
+
+</footer>  
+
+</body>
+</html>
